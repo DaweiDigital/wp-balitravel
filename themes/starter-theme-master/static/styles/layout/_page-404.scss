@@ -1,0 +1,28 @@
+.page-404-header {
+    background-repeat: no-repeat;
+    background-position: 47% center;
+
+    @include media-breakpoint-up(md) {
+        background-image: url('../images/page-404-bg.svg');
+    }
+}
+
+.page-404-title {
+    font-size: 150px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 213px;
+    }
+}
+
+.page-404-content {
+
+    p {}
+
+    .highlight-text {
+        font-size: 32px;
+        color: $primary;
+    }
+}
+
+.page-404-footer {}

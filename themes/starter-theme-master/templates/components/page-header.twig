@@ -1,0 +1,14 @@
+{% for item in section.page_header %}
+    <section class="bs-block bs-header js-lazy{% if item.paddingBottom is not empty %} p-b-md-{{item.paddingBottom}}{% endif %}{% if item.paddingTop is not empty %} p-t-md-{{item.paddingTop}} {% endif %}{{ item.xsDisplay == 'xsNo' ? 'd-xs-none'}}" data-bg="url({{ item.pHbGimg.sizes['banner-thumb'] }})">
+        <div class="container" {% if item.sectionAnchor is not empty %}id="{{item.sectionAnchor}}"{% endif %}>
+            <h1 class="fs-medium mt-0 mb-2">
+                {{ item.pageHeaderTitle }}
+            </h1>
+            {% if item.pageHeaderText is not empty %}
+            <p class="m-0 text-perrex-lg ml-auto mr-auto">
+                {{ item.pageHeaderText}}
+            </p>
+            {% endif %}
+        </div>
+    </section>
+{% endfor %}

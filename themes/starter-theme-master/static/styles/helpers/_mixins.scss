@@ -1,0 +1,59 @@
+/*********************
+TRANSITIONS
+*********************/
+
+@mixin transition($attributes...) {
+    transition: $attributes;
+}
+
+@mixin rotating { animation: rotating 1s linear infinite }
+
+/*********************
+FORM
+*********************/
+
+@mixin placeholder-color($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+
+    &::-moz-placeholder {
+        color: $color;
+    }
+
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+
+    &:-moz-placeholder {
+        color: $color;
+    }
+}
+
+@mixin input-placeholder {
+    ::-webkit-input-placeholder {@content}
+    :-moz-placeholder           {@content}
+    ::-moz-placeholder          {@content}
+    :-ms-input-placeholder      {@content}  
+  }
+
+@mixin bg-opacity($bg-color, $bg-opacity) {
+    background-color: $bg-color; /* The Fallback */
+    background-color: rgba($bg-color, $bg-opacity);
+}
+
+/*********************
+Custom BREAKPOINTS
+*********************/
+
+@mixin custom-media-breakpoint-up($breakpoint) {
+    @media only screen and (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin custom-media-breakpoint-down($breakpoint) {
+    @media only screen and (min-width: $breakpoint) {
+        @content;
+    }
+}

@@ -1,0 +1,61 @@
+// EXTERNAL INCLUDES
+@import "../../../../../node_modules/slick-carousel/slick/slick.css";
+@import "../../../../../node_modules/slick-carousel/slick/slick-theme.css";
+@import '../../../../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css';
+
+
+// BOOSTRAP INCLUDES
+@import "bootstrap/bootstrap.scss";
+
+@import "helpers/variables.scss";
+@import "helpers/mixins.scss";
+@import "helpers/functions.scss";
+
+// @imports
+@import "fonts/fontawesome/fontawesome";
+@import "fonts/fontawesome/regular";
+@import "fonts/fontawesome/solid";
+@import "fonts/fontawesome/light";
+@import "fonts/fontawesome/brands";
+
+
+// Typography include
+@import "base/typography.scss";
+@import "base/basic.scss";
+
+// Base settings include
+@import 'base/backgrounds/bg-colors';
+@import 'base/backgrounds/bg-images';
+
+@import 'base/text-setup/font-sizes';
+@import 'base/text-setup/font-weight';
+@import 'base/text-setup/line-heights';
+@import 'base/text-setup/text-colors';
+
+// CUSTOM SPACING include
+@import "base/ulities/custom-spacing.scss";
+@import "base/ulities/hover-effects.scss";
+@import "base/ulities/positions.scss";
+
+// Layouts include
+@import "layout/header.scss";
+@import "layout/footer.scss";
+@import "layout/page-404.scss";
+
+// Global components
+@import "components/buttons.scss";
+@import "components/forms.scss";
+@import "components/nav";
+@import "components/cta-panel";
+@import "components/page-header";
+@import "components/social-media-nav";
+@import "components/main-banner";
+@import "components/reviews";
+@import "components/package-aside";
+@import "components/contact-list";
+@import "components/timeline-list";
+@import "components/gallery-list";
+@import "components/package-list";
+
+// WP components
+@import "layout/post.scss";

@@ -1,0 +1,79 @@
+#wp-content-editor-tools {
+	background-color: #f8f9ff;
+}
+
+#post-status-info {
+	border-color: transparent;
+	box-shadow: $box-shadow;
+}
+
+.wp-switch-editor,
+div.mce-toolbar-grp,
+.wp-editor-container {
+	border-color: whitesmoke !important;
+}
+
+.wp-editor-expand #post-status-info {
+	border-top-color: white;
+	padding-top: 2px;
+}
+
+.quicktags-toolbar,
+.wp-editor-expand #wp-content-editor-tools {
+	border-bottom-color: whitesmoke !important;
+}
+
+#major-publishing-actions {
+	background-color: white;
+}
+
+#comment-link-box,
+#edit-slug-box,
+.ac_match,
+.highlight,
+.subsubsub a.current {
+	color: $body-color;
+}
+
+.wp-core-ui .button-link {
+	color: $primary;
+}
+
+.categorydiv div.tabs-panel,
+.customlinkdiv div.tabs-panel,
+.posttypediv div.tabs-panel,
+.taxonomydiv div.tabs-panel,
+.wp-tab-panel,
+.wp-tab-active,
+ul.add-menu-item-tabs li.tabs,
+ul.category-tabs li.tabs {
+	border-color: $border-color;
+}
+
+.wp-tab-active,
+ul.add-menu-item-tabs li.tabs,
+ul.category-tabs li.tabs {
+	border-bottom-color: #fdfdfd;
+}
+
+#major-publishing-actions {
+	border-top-color: $border-color;
+}
+
+.column-comments .post-com-count-approved:focus:after,
+.column-comments .post-com-count-approved:hover:after,
+.column-response .post-com-count-approved:focus:after,
+.column-response .post-com-count-approved:hover:after {
+	border-top-color: $primary;
+}
+
+.column-comments .post-com-count-approved:focus .comment-count-approved,
+.column-comments .post-com-count-approved:hover .comment-count-approved,
+.column-response .post-com-count-approved:focus .comment-count-approved,
+.column-response .post-com-count-approved:hover .comment-count-approved {
+	background: $primary;
+}
+
+th .comment-grey-bubble:before {
+	color: $body-color;
+}

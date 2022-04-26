@@ -1,0 +1,34 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<section class="bs-block bs-header text-center bg-image-lines">
+    <div class="container">
+        <h1 class="fs-medium mt-0 mb-2">
+            {{ __( 'Výsledky vyhledávání', 'ixtent' ) }}
+        </h1>
+        <p class="m-0 text-perrex ml-auto mr-auto">
+            {{ __( 'Lorem ispum dolor sit amet', 'ixtent' ) }}
+        </p>
+    </div>
+</section>
+<section class="bs-block bg-lightgrey">
+    <div class="container-medium ml-auto mr-auto">
+<ul class="search-list">
+    {% for item in posts %}
+        <li class="search-list-item">
+            <div class="search-list-inner">
+                <div class="search-list-content">
+                    <h2 class="search-list-title fs-24 text-decoration-underline">
+                        <a href="{{ item.link }}">
+                            {{ item.title }}
+                        </a>
+                    </h2>
+                    <p class="search-list-description">{{ item.preview.read_more('') }}</p>
+                </div>
+            </div>
+        </li>
+    {% endfor %}
+</ul>
+    </div>
+</section>
+{% endblock %}

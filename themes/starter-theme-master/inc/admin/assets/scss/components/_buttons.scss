@@ -1,0 +1,61 @@
+.wrap .add-new-h2,
+.wrap .add-new-h2:active,
+.wrap .page-title-action,
+.wrap .page-title-action:active,
+.wp-core-ui .button,
+.wp-core-ui .button-secondary {
+	border: 1px solid #e9eff4;
+	background-color: white;
+	box-shadow: none;
+	border-radius: 2px;
+	color: #5a678e;
+
+	&:hover,
+	&:focus,
+	&:active {
+		border-color: #e9eff4;
+		background-color: #e9eff4;
+		color: #5a678e;
+		box-shadow: none;
+	}
+}
+
+.wp-core-ui .button-primary,
+.wp-core-ui .button.button-primary.button-hero {
+	background-color: $primary;
+	border: none;
+	border-radius: 2px;
+	color: white;
+	text-shadow: none;
+	font-weight: 500;
+	box-shadow: 0 11px 49px 0 rgba($primary, 0.33);
+	transition: background-color .5s;
+	padding: 8px 18px;
+	height: 45px;
+	line-height: 29px;
+	font-size: 14px;
+
+	&:hover,
+	&:focus,
+	&:active {
+		box-shadow: 0 11px 49px 0 rgba($primary, 0.33);
+		background-color: $secondary;
+		color: white;
+	}
+}
+
+.wp-core-ui .button-primary-disabled,
+.wp-core-ui .button-primary.disabled,
+.wp-core-ui .button-primary:disabled,
+.wp-core-ui .button-primary[disabled] {
+	background-color: $primary !important;
+	color: lighten($primary, 30%) !important;
+	text-shadow: none !important;
+}
+
+.wp-core-ui .button-group.button-large .button,
+.wp-core-ui .button.button-large {
+	height: 35px;
+	line-height: 33px;
+	padding-bottom: 0;
+}

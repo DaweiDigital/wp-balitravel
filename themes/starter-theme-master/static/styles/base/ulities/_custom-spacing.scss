@@ -1,0 +1,40 @@
+$max: 200;
+$offset: 1;
+$unit: 'px'; // Feel free to change the unit.
+@mixin list-loop($className, $styleName) {
+  $i: 0;
+  @while $i <= $max {
+    #{$className + $i} { 
+      #{$styleName}: #{$i + $unit};
+    }
+    $i: $i + $offset;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  @include list-loop('.m-t-xs-', 'margin-top');
+  @include list-loop('.m-b-xs-', 'margin-bottom');
+  
+  @include list-loop('.p-t-xs-', 'padding-top');
+  @include list-loop('.p-b-xs-', 'padding-bottom');
+}
+
+@include media-breakpoint-up(md) {
+  @include list-loop('.m-t-md-', 'margin-top');
+  @include list-loop('.m-b-md-', 'margin-bottom');
+  
+  @include list-loop('.p-t-md-', 'padding-top');
+  @include list-loop('.p-b-md-', 'padding-bottom');
+}
+
+.p-r-lg-50 {
+  @include media-breakpoint-up(lg) {
+    padding-right: 50px;
+  }
+}
+
+.p-r-xl-140 {
+  @include media-breakpoint-up(xl) {
+    padding-right: 140px;
+  }
+}

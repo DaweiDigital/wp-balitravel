@@ -1,0 +1,46 @@
+.view-switch a:focus:before,
+.view-switch a:hover:before {
+	color: $body-color;
+}
+
+.view-switch a.current:before {
+	color: $primary;
+}
+
+.media-frame.mode-grid .attachment.details:focus,
+.media-frame.mode-grid .attachment:focus,
+.media-frame.mode-grid .selected.attachment:focus {
+	box-shadow: inset 0 0 2px 3px #f1f1f1, inset 0 0 0 7px rgba($primary, .5);
+}
+
+.media-frame a,
+.media-menu > a {
+	color: $primary !important;
+
+	&:focus,
+	&:hover {
+		color: darken($primary, 10%);
+		box-shadow: none !important;
+	}
+}
+
+.media-frame input[type=text]:focus,
+.media-frame input[type=password]:focus,
+.media-frame input[type=number]:focus,
+.media-frame input[type=search]:focus,
+.media-frame input[type=email]:focus,
+.media-frame input[type=url]:focus,
+.media-frame select:focus,
+.media-frame textarea:focus {
+	border-color: darken($border-color, 10%) !important;
+	box-shadow: none;
+}
+
+.media-frame-content {
+	border-top-color: $border-color;
+}
+
+.media-router .active,
+.media-router>a.active:last-child {
+	border-color: $border-color;
+}

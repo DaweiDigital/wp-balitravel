@@ -1,0 +1,101 @@
+#dashboard-widgets .postbox-container,
+#wpbody-content #dashboard-widgets.columns-4 .postbox-container {
+	width: 33.333%;
+}
+
+.metabox-holder .postbox-container .empty-container {
+	border-color: transparent;
+}
+
+#dashboard_right_now .inside,
+#dashboard_right_now .inside p {
+	font-size: 14px;
+}
+
+#dashboard_right_now li {
+	@media (min-width: 1100px) {
+		width: 33.333%;
+	}
+}
+
+#dashboard_right_now li a {
+	color: $body-color;
+
+	&:hover {
+		color: darken($primary, 10%);
+	}
+}
+
+#dashboard_right_now .post-count a:before,
+#dashboard_right_now .post-count span:before,
+#dashboard_right_now .page-count a:before,
+#dashboard_right_now .page-count span:before,
+#dashboard_right_now li a:before,
+#dashboard_right_now li span:before,
+.welcome-panel .welcome-icon:before {
+	@extend .dawei-icon;
+
+	color: $purple;
+	font-size: 16px;
+	margin-right: 2px;
+}
+
+#dashboard_right_now .post-count a:before,
+#dashboard_right_now .post-count span:before {
+	content: unicode($dawei-star-empty);
+}
+
+#dashboard_right_now .page-count a:before,
+#dashboard_right_now .page-count span:before {
+	content: unicode($dawei-admin-page);
+}
+
+#dashboard_right_now .comment-count a:before {
+	content: unicode($dawei-admin-comments);
+}
+
+#dashboard_right_now .main p > a[href='options-reading.php'] {
+	display: block;
+	background-color: $danger;
+	color: white;
+	text-align: center;
+	padding: .25em 0 .125em;
+	margin-top: 10px;
+	font-size: 18px;
+	transition: background-color .5s;
+
+	&:hover {
+		background-color: darken($danger, 10%);
+	}
+}
+
+.postbox .hndle,
+.stuffbox .hndle {
+	border-bottom-color: $border-color;
+}
+
+#dashboard-widgets .postbox {
+	input[type=text],
+	input[type=search],
+	input[type=tel],
+	input[type=time],
+	input[type=url],
+	input[type=week],
+	input[type=password],
+	input[type=color],
+	input[type=date],
+	input[type=datetime],
+	input[type=datetime-local],
+	input[type=email],
+	input[type=month],
+	input[type=number],
+	select,
+	textarea {
+		padding: 11px 10px !important;
+	}
+}
+
+#dashboard-widgets .postbox .input-text-wrap label,
+#dashboard-widgets .postbox .input-text-wrap label {
+	padding: 13px 10px !important;
+}

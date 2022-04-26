@@ -1,0 +1,23 @@
+.tech-support-widget a {
+	font-weight: 600;
+}
+
+.tech-support-form__group {
+	margin-bottom: 15px;
+}
+
+.tech-support-form__group label {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 3px;
+}
+
+.tech-support-form__group input[type="text"],
+.tech-support-form__group input[type="email"],
+.tech-support-form__group textarea {
+	width: 100%;
+}
+
+.tech-support-form__group input {
+	max-width: 300px;
+}

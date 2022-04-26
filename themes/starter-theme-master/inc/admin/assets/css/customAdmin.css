@@ -1,0 +1,23 @@
+@media (min-width: 782px) {
+  body.auto-fold .edit-post-layout__content {
+    margin-left: 60px;
+  }
+}
+
+@media (min-width: 960px) {
+  body.auto-fold .edit-post-layout__content {
+    margin-left: 200px;
+  }
+}
+
+@media (min-width: 782px) {
+  .auto-fold .edit-post-header {
+    left: 60px;
+  }
+}
+
+@media (min-width: 960px) {
+  .auto-fold .edit-post-header {
+    left: 200px;
+  }
+}

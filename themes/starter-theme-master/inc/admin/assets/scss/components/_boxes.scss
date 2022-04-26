@@ -1,0 +1,61 @@
+.community-events li.event-none {
+	border-left-color: $primary;
+}
+
+.card,
+.postbox,
+#menu-management .menu-edit,
+#menu-settings-column .accordion-container,
+.comment-ays,
+.feature-filter,
+.imgedit-group,
+.manage-menus,
+.menu-item-handle,
+.popular-tags,
+.stuffbox,
+.widget-inside,
+.widget-top,
+.widgets-holder-wrap,
+.wp-editor-container,
+p.popular-tags,
+table.widefat {
+	border-radius: 2px;
+	box-shadow: $box-shadow;
+	border-color: transparent;
+}
+
+.welcome-panel {
+	box-shadow: $box-shadow;
+}
+
+.metabox-holder .postbox>h3,
+.metabox-holder .stuffbox>h3,
+.metabox-holder h2.hndle,
+.metabox-holder h3.hndle {
+	font-size: 16px;
+	color: $body-color;
+	font-weight: 600;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.notice,
+div.error,
+div.updated {
+	border-radius: 2px;
+}
+
+.widefat thead td,
+.widefat thead th {
+	border-bottom-color: $border-color;
+}
+
+.widefat tfoot td,
+.widefat tfoot th {
+	border-top-color: $border-color;
+}
+
+.wp-filter {
+	border-color: transparent;
+	box-shadow: $box-shadow;
+}

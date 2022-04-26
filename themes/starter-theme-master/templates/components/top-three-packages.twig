@@ -1,0 +1,31 @@
+{% for item in section.top_three_packages %}
+    <section class="bs-block{% if item.paddingBottom is not empty %} p-b-md-{{item.paddingBottom}}{% endif %}{% if item.paddingTop is not empty %} p-t-md-{{item.paddingTop}} {% endif %}{{ item.topOverlay == 'overlayYes' ? ' top-overlay js-top-overlay'}}{{ item.xsDisplay == 'xsNo' ? 'd-xs-none'}}">
+        <div class="container" {% if item.sectionAnchor is not empty %}id="{{item.sectionAnchor}}"{% endif %}>
+            {% if item.tTpL is not empty %}
+                <ul class="packages-list d-flex flex-wrap align-items-center justify-content-center theme-v1 my-0">
+                    {% for item in item.tTpL %}
+                        <li class="package-list-item">
+                            <div class="package-list-item-content">
+                                <div class="package-list-image js-lazy" data-bg="url({{ item.tTpLImage.sizes['medium-thumb'] }})">
+                                    <noscript><img src="{{ item.tTpLImage.sizes['medium-thumb'] }}" alt="{{ item.tTpLImage.alt }}"></noscript>
+                                </div>
+                                {% if item.tTpLDiscount is not empty %}
+                                    <div class="package-list-discount text-center">{{item.tTpLDiscount}}%<div>OFF</div></div>
+                                {% endif %}
+                                <div class="package-list-footer d-flex align-item-center justify-content-between">
+                                    <h3 class="package-list-title">
+                                        {{item.tTpLLink.title}}
+                                    </h3>
+                                    <span class="package-list-price">
+                                        {{item.tTpLPrice}} Rp
+                                    </span>
+                                </div>
+                                <a href="{{item.tTpLLink.link}}" class="nested-link"></a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </section>
+{% endfor %}

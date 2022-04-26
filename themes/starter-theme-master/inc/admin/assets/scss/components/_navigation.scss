@@ -1,0 +1,369 @@
+$nav-width: 200px;
+$nav-collapsed-width: 60px;
+
+.folded #adminmenu,
+.folded #adminmenu li.menu-top,
+.folded #adminmenuback,
+.folded #adminmenuwrap {
+  @media (min-width: 783px) {
+    width: $nav-collapsed-width;
+  }
+}
+
+#adminmenu,
+#adminmenu .wp-submenu,
+#adminmenuback,
+#adminmenuwrap {
+  background: transparent;
+  width: $nav-width;
+}
+
+#adminmenuback {
+  background: linear-gradient(10deg, #ff399e, #1c0f69);
+}
+
+#adminmenu .wp-submenu {
+  background-color: #ffffff;
+}
+
+#adminmenu li.wp-has-submenu.wp-not-current-submenu.opensub:hover:after {
+  border-right-color: #1c0f69;
+}
+
+#wpcontent,
+#wpfooter {
+  margin-left: $nav-width;
+}
+
+.folded #wpcontent,
+.folded #wpfooter {
+  @media (min-width: 783px) {
+    margin-left: $nav-collapsed-width;
+  }
+}
+
+.auto-fold #wpcontent,
+.auto-fold #wpfooter {
+  @media (max-width: 960px) and (min-width: 783px) {
+    margin-left: $nav-collapsed-width;
+  }
+}
+
+.auto-fold #adminmenu,
+.auto-fold #adminmenu li.menu-top,
+.auto-fold #adminmenuback,
+.auto-fold #adminmenuwrap {
+  @media (max-width: 960px) and (min-width: 783px) {
+    width: $nav-collapsed-width;
+  }
+}
+
+#adminmenu .wp-not-current-submenu .wp-submenu,
+.folded #adminmenu .wp-has-current-submenu .wp-submenu {
+  @media (min-width: 783px) {
+    min-width: $nav-width;
+  }
+}
+
+#adminmenu .wp-submenu {
+  left: $nav-width;
+}
+
+#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head,
+#adminmenu .wp-menu-arrow,
+#adminmenu .wp-menu-arrow div,
+#adminmenu li.current a.menu-top,
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
+.folded #adminmenu li.current.menu-top,
+.folded #adminmenu li.wp-has-current-submenu,
+#adminmenu .wp-has-current-submenu .wp-submenu,
+#adminmenu .wp-has-current-submenu .wp-submenu.sub-open,
+#adminmenu .wp-has-current-submenu.opensub .wp-submenu,
+#adminmenu a.wp-has-current-submenu:focus + .wp-submenu,
+.no-js li.wp-has-current-submenu:hover .wp-submenu,
+#adminmenu li.menu-top:hover,
+#adminmenu li.opensub > a.menu-top,
+#adminmenu li > a.menu-top:focus {
+  background-color: $third;
+  color: white;
+}
+
+#adminmenu .wp-submenu,
+.folded #adminmenu .wp-has-current-submenu .wp-submenu,
+.folded #adminmenu a.wp-has-current-submenu:focus + .wp-submenu {
+  background-color: #1c0f69;
+}
+
+#adminmenu > li > a {
+  border-left: 4px solid transparent;
+}
+
+#adminmenu > li:hover > a,
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
+  border-left-color: $primary;
+}
+
+#adminmenu .wp-has-current-submenu ul > li > a,
+.folded #adminmenu li.menu-top .wp-submenu > li > a,
+#adminmenu .wp-submenu .wp-submenu-head {
+  padding-left: 22px;
+}
+
+#adminmenu .wp-submenu .wp-submenu-head {
+  padding-top: 16px;
+  font-weight: 500;
+}
+
+#adminmenu .wp-submenu a,
+#adminmenu a,
+#adminmenu a:hover,
+#adminmenu li.menu-top > a:focus {
+  color: white;
+}
+
+#adminmenu .wp-submenu a:focus,
+#adminmenu .wp-submenu a:hover
+ {
+  color: #ffffff;
+}
+
+#adminmenu .wp-not-current-submenu li > a:hover {
+  background-color: $primary;
+}
+
+#adminmenu a.menu-top {
+  font-size: 13px;
+}
+
+#adminmenuwrap .admin-menu-logo {
+  display: block;
+  height: 35px;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  left: 0;
+
+  @media (max-width: 782px) {
+    top: 23px;
+  }
+
+  @media (max-width: 600px) {
+    top: 70px;
+  }
+}
+
+#adminmenuwrap:before {
+  content: "";
+  display: block;
+  margin: -10px auto 23px;
+  width: 122px;
+  height: 103px;
+  background-image: url("../img/dawei-digital-white.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (max-width: 782px) {
+    margin-top: 23px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 70px;
+  }
+}
+
+.auto-fold #adminmenuwrap:before {
+  @media (max-width: 960px) and (min-width: 783px) {
+    width: 35px;
+    background-position: left center;
+    background-size: 105px 35px;
+  }
+}
+
+.folded #adminmenuwrap:before {
+  @media (min-width: 783px) {
+    width: 35px;
+    background-position: left center;
+    background-size: 105px 35px;
+  }
+}
+
+#adminmenu div.wp-menu-image {
+  width: 56px;
+  height: 44px;
+}
+
+#adminmenu div.wp-menu-name {
+  padding: 13px 0;
+}
+
+#adminmenu .wp-has-current-submenu ul > li > a,
+.folded #adminmenu li.menu-top .wp-submenu > li > a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+#adminmenu div.wp-menu-image:before {
+  color: #ffffff;
+  font-size: 17px;
+  padding: 12px 0;
+  margin-top: 1px;
+}
+
+#adminmenu div.wp-menu-image.dashicons-dashboard:before {
+  margin-top: 2px;
+}
+
+#adminmenu .current div.wp-menu-image:before,
+#adminmenu .wp-has-current-submenu div.wp-menu-image:before,
+#adminmenu a.current:hover div.wp-menu-image:before,
+#adminmenu a.wp-has-current-submenu:hover div.wp-menu-image:before,
+#adminmenu li.wp-has-current-submenu a:focus div.wp-menu-image:before,
+#adminmenu li.wp-has-current-submenu.opensub div.wp-menu-image:before,
+#adminmenu li.wp-has-current-submenu:hover div.wp-menu-image:before {
+  color: $third ;
+}
+
+#adminmenu .awaiting-mod,
+#adminmenu .update-plugins {
+  background-color: white;
+  color: $blue;
+}
+
+#adminmenu li.wp-menu-separator {
+  height: 30px;
+}
+
+.auto-fold #adminmenu a.menu-top {
+  @media (max-width: 960px) {
+    height: 44px;
+  }
+}
+
+.folded #adminmenu a.menu-top {
+  @media (min-width: 783px) {
+    height: 44px;
+  }
+}
+
+.auto-fold #adminmenu div.wp-menu-image {
+  @media (max-width: 960px) and (min-width: 783px) {
+    width: 56px;
+    height: 44px;
+  }
+}
+
+.folded #adminmenu div.wp-menu-image {
+  @media (min-width: 783px) {
+    width: 56px;
+    height: 44px;
+  }
+}
+
+.auto-fold #adminmenu .opensub .wp-submenu,
+.auto-fold #adminmenu .wp-has-current-submenu .wp-submenu.sub-open,
+.auto-fold #adminmenu .wp-has-current-submenu a.menu-top:focus + .wp-submenu,
+.auto-fold #adminmenu .wp-has-current-submenu.opensub .wp-submenu,
+.auto-fold #adminmenu .wp-submenu.sub-open,
+.auto-fold #adminmenu a.menu-top:focus + .wp-submenu {
+  @media (max-width: 960px) and (min-width: 783px) {
+    left: $nav-collapsed-width;
+  }
+}
+
+.folded #adminmenu .opensub .wp-submenu,
+.folded #adminmenu .wp-has-current-submenu .wp-submenu.sub-open,
+.folded #adminmenu .wp-has-current-submenu a.menu-top:focus + .wp-submenu,
+.folded #adminmenu .wp-has-current-submenu.opensub .wp-submenu,
+.folded #adminmenu .wp-submenu.sub-open,
+.folded #adminmenu a.menu-top:focus + .wp-submenu,
+.no-js.folded #adminmenu .wp-has-submenu:hover .wp-submenu {
+  @media (min-width: 783px) {
+    left: $nav-collapsed-width;
+  }
+}
+
+/* Collapse button */
+#collapse-menu {
+  border-top: 1px solid #ff399e;
+}
+
+#collapse-button {
+  color: white;
+}
+
+#collapse-button .collapse-button-icon:after {
+  @extend .dawei-icon;
+
+  content: unicode($dawei-admin-collapse);
+  padding: 5px 0;
+}
+
+#collapse-button .collapse-button-icon,
+#collapse-button .collapse-button-label {
+  line-height: 29px;
+}
+
+#collapse-button .collapse-button-icon {
+  width: 56px;
+  height: 44px;
+  color: #b7a0f6;
+}
+
+#collapse-button .collapse-button-label {
+  padding-left: 56px;
+}
+
+#collapse-button {
+  height: 44px;
+  border-left: 4px solid transparent;
+
+  &:hover {
+    background-color: $blue;
+    color: white;
+    border-left-color: $primary;
+
+    .collapse-button-icon {
+      color: $primary;
+    }
+  }
+}
+
+.auto-fold #adminmenu li a {
+  @media (max-width: 782px) {
+    font-size: 13px;
+  }
+}
+
+.auto-fold #adminmenu {
+  @media (max-width: 600px) {
+    top: auto;
+  }
+}
+
+#adminmenu li.menu-top > a:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#adminmenu #toplevel_page_all-in-one-seo-pack-aioseop_class .wp-menu-image {
+  background-position: 20px 14px !important;
+}
+
+#adminmenu #toplevel_page_all-in-one-seo-pack-aioseop_class:hover .wp-menu-image {
+  background-position: 20px -18px !important;
+}
+
+@media (min-width: 782px) and (min-width: 960px) {
+  body.auto-fold .edit-post-layout__content {
+    margin-left: 200px;
+  }
+}
+
+@media (min-width: 960px) {
+  .auto-fold .edit-post-header {
+    left: 200px;
+  }
+}

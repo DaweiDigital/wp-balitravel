@@ -1,0 +1,44 @@
+.dashicons-dashboard:before,
+.dashicons-admin-post:before,
+.dashicons-format-standard:before,
+.dashicons-admin-tools:before,
+.dashicons-admin-settings:before,
+.dashicons-admin-media:before,
+.dashicons-admin-comments:before,
+.dashicons-admin-page:before,
+.dashicons-admin-users:before {
+	@extend .dawei-icon;
+}
+
+.dashicons-dashboard:before {
+	content: unicode($dawei-dashboard);
+}
+
+.dashicons-admin-post:before,
+.dashicons-format-standard:before {
+	content: unicode($dawei-star-empty);
+}
+
+.dashicons-admin-tools:before {
+	content: unicode($dawei-admin-tools);
+}
+
+.dashicons-admin-settings:before {
+	content: unicode($dawei-admin-settings);
+}
+
+.dashicons-admin-media:before {
+	content: unicode($dawei-admin-media);
+}
+
+.dashicons-admin-comments:before {
+	content: unicode($dawei-admin-comments);
+}
+
+.dashicons-admin-page:before {
+	content: unicode($dawei-admin-page);
+}
+
+.dashicons-admin-users:before {
+	content: unicode($dawei-admin-users);
+}

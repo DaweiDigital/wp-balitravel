@@ -1,0 +1,192 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Cestina\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-07 12:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.2; wp-5.3.2"
+
+#: templates/archive-reference.twig:57 templates/template-reference.twig:49
+msgid " Země"
+msgstr ""
+
+#: templates/404.twig:12
+msgid "404"
+msgstr ""
+
+#. Name of the template
+msgid "Agenda faktury"
+msgstr ""
+
+#: templates/template-reference.twig:23
+msgid "Automotive, Doprava"
+msgstr ""
+
+#. Name of the template
+msgid "Blog"
+msgstr ""
+
+#: templates/template-reference.twig:19
+msgid "Další aplikace"
+msgstr ""
+
+#. Name of the template
+msgid "Digitalizace"
+msgstr ""
+
+#. Name of the template
+msgid "DMS"
+msgstr ""
+
+#: templates/archive-interviews.twig:20 templates/template-rozhovory.twig:21
+msgid "Filtrovat dle kategorie"
+msgstr ""
+
+#: templates/archive-reference.twig:25
+msgid "Filtrovat podle oboru"
+msgstr ""
+
+#: templates/404.twig:23
+msgid "Hlavní stránka"
+msgstr ""
+
+#. Name of the template
+msgid "Kariera"
+msgstr ""
+
+#. Name of the template
+msgid "Kontakt"
+msgstr ""
+
+#: templates/index.twig:10
+msgid "Lorem ispum dolor sit amet"
+msgstr ""
+
+#. Name of the theme
+msgid "My Timber Starter Theme"
+msgstr ""
+
+#: templates/base.twig:134
+msgid "Napište nám"
+msgstr ""
+
+#: inc/ajax.php:16
+msgid "Nebyly nalezeny žádné časté dotazy."
+msgstr ""
+
+#. Name of the template
+msgid "O nas"
+msgstr ""
+
+#. Name of the template
+msgid "Opentext"
+msgstr ""
+
+#: templates/404.twig:22
+msgid "Pokračovat na hlavní stránku"
+msgstr ""
+
+#: templates/partials/interview.twig:28
+msgid "PŘEČÍST Celý rozhovor"
+msgstr ""
+
+#. Name of the template
+#: templates/archive-reference.twig:8
+msgid "Reference"
+msgstr ""
+
+#. Name of the template
+#: templates/archive-interviews.twig:8
+msgid "Rozhovory"
+msgstr ""
+
+#. Name of the template
+msgid "Servisní podpora"
+msgstr ""
+
+#. Name of the template
+msgid "Slovník pojmů"
+msgstr ""
+
+#. Name of the template
+msgid "Sprava dokumentu"
+msgstr ""
+
+#. Description of the theme
+msgid "Starter Theme to use with Timber"
+msgstr ""
+
+#: templates/archive.twig:11
+msgid "Toto je podnadpis blog"
+msgstr ""
+
+#: templates/archive-interviews.twig:11
+msgid "Toto je podnadpis interviews"
+msgstr ""
+
+#: templates/archive-reference.twig:11
+msgid "Toto je podnadpis reference"
+msgstr ""
+
+#: templates/archive-solutions.twig:11
+msgid "Toto je podnadpis řešení"
+msgstr ""
+
+#. Author of the theme
+msgid "Upstatement and YOU!"
+msgstr ""
+
+#: templates/archive-reference.twig:29
+msgid "Vyberte aplikaci"
+msgstr ""
+
+#: templates/archive-reference.twig:61 templates/template-reference.twig:38
+#: templates/template-reference.twig:53
+msgid "Vyberte zemi realizace"
+msgstr ""
+
+#: templates/archive-reference.twig:45
+msgid "Vyberte řešení"
+msgstr ""
+
+#: templates/base.twig:86 templates/base.twig:93
+msgid "Vyhledat"
+msgstr ""
+
+#: templates/archive-reference.twig:82 templates/template-reference.twig:222
+msgid "Více referencí"
+msgstr ""
+
+#: templates/index.twig:7
+msgid "Výsledky vyhledávání"
+msgstr ""
+
+#: templates/components/gallery-five-columns.twig:18
+msgid "Zobrazit kompletní fotogalerii"
+msgstr ""
+
+#: templates/archive-interviews.twig:24 templates/archive-solutions.twig:27
+#: templates/archive.twig:27 templates/category.twig:29
+msgid "Zobrazit vše"
+msgstr ""
+
+#. Name of the template
+msgid "Úvod"
+msgstr ""
+
+#: templates/single.twig:47
+msgid "Čtěte dál"
+msgstr ""
+
+#: templates/archive-reference.twig:41 templates/template-reference.twig:34
+msgid "Řešení"
+msgstr ""

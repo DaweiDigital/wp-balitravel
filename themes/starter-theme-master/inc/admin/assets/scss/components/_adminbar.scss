@@ -1,0 +1,189 @@
+#wpadminbar {
+	right: 0;
+	left: 0;
+	width: auto;
+	background-color: white;
+	box-shadow: $box-shadow;
+
+	@media (min-width: 783px) {
+		left: $nav-width;
+	}
+
+	.folded & {
+		@media (min-width: 783px) {
+			left: $nav-collapsed-width;
+		}
+	}
+
+	.auto-fold & {
+		@media (min-width: 783px) and (max-width: 960px) {
+			left: $nav-collapsed-width;
+		}
+	}
+}
+
+#wpadminbar .ab-empty-item,
+#wpadminbar a.ab-item,
+#wpadminbar>#wp-toolbar span.ab-label,
+#wpadminbar>#wp-toolbar span.noticon {
+	color: $body-color;
+	font-weight: 600;
+}
+
+#wpadminbar #adminbarsearch:before,
+#wpadminbar .ab-icon:before,
+#wpadminbar .ab-item:before {
+	color: $body-color;
+}
+
+#wpadminbar .ab-top-menu>li.hover>.ab-item,
+#wpadminbar.nojq .quicklinks .ab-top-menu>li>.ab-item:focus,
+#wpadminbar:not(.mobile) .ab-top-menu>li:hover>.ab-item,
+#wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item:focus {
+	background: $primary;
+	color: white;
+
+	.display-name {
+		color: white;
+	}
+}
+
+#wpadminbar .quicklinks .ab-sub-wrapper .menupop.hover>a,
+#wpadminbar .quicklinks .menupop ul li a:focus,
+#wpadminbar .quicklinks .menupop ul li a:focus strong,
+#wpadminbar .quicklinks .menupop ul li a:hover,
+#wpadminbar .quicklinks .menupop ul li a:hover strong,
+#wpadminbar .quicklinks .menupop.hover ul li a:focus,
+#wpadminbar .quicklinks .menupop.hover ul li a:hover,
+#wpadminbar .quicklinks .menupop.hover ul li div[tabindex]:focus,
+#wpadminbar .quicklinks .menupop.hover ul li div[tabindex]:hover,
+#wpadminbar li #adminbarsearch.adminbar-focused:before,
+#wpadminbar li .ab-item:focus .ab-icon:before,
+#wpadminbar li .ab-item:focus:before,
+#wpadminbar li a:focus .ab-icon:before,
+#wpadminbar li.hover .ab-icon:before,
+#wpadminbar li.hover .ab-item:before,
+#wpadminbar li:hover #adminbarsearch:before,
+#wpadminbar li:hover .ab-icon:before,
+#wpadminbar li:hover .ab-item:before,
+#wpadminbar.nojs .quicklinks .menupop:hover ul li a:focus,
+#wpadminbar.nojs .quicklinks .menupop:hover ul li a:hover {
+	color: white;
+}
+
+#wpadminbar:not(.mobile)>#wp-toolbar a:focus span.ab-label,
+#wpadminbar:not(.mobile)>#wp-toolbar li:hover span.ab-label,
+#wpadminbar>#wp-toolbar li.hover span.ab-label {
+	color: white;
+}
+
+#wpadminbar #wp-admin-bar-comments .count-0 {
+	opacity: 1;
+}
+
+#wpadminbar #wp-admin-bar-new-content .ab-icon:before {
+	@extend .dawei-icon;
+
+	content: unicode($dawei-plus);
+	font-size: 15px;
+	top: -1px;
+}
+
+#wpadminbar #wp-admin-bar-comments .ab-icon:before {
+	@extend .dawei-icon;
+
+	content: unicode($dawei-admin-comments);
+	font-size: 15px;
+	top: -1px;
+}
+
+#wpadminbar .quicklinks>ul>li>a {
+	padding-right: 12px;
+	padding-left: 12px;
+}
+
+#wpadminbar .menupop .ab-sub-wrapper,
+#wpadminbar .shortlink-input {
+	background-color: $primary;
+}
+
+#wpadminbar .ab-submenu .ab-item,
+#wpadminbar .quicklinks .menupop ul li a,
+#wpadminbar .quicklinks .menupop ul li a strong,
+#wpadminbar .quicklinks .menupop.hover ul li a,
+#wpadminbar.nojs .quicklinks .menupop:hover ul li a {
+	color: white;
+
+	&:hover {
+		color: #eee;
+	}
+}
+
+#wpadminbar .display-name {
+	font-weight: 600;
+	color: $primary;
+}
+
+#wpadminbar #wp-admin-bar-user-info .display-name {
+	color: white;
+}
+
+#contextual-help-link-wrap,
+#screen-options-link-wrap {
+	box-shadow: $box-shadow;
+	border: none;
+	background-color: white;
+
+	> .button {
+		background-color: white;
+		border: none;
+		box-shadow: none;
+	}
+}
+
+#screen-meta {
+	border: none;
+	box-shadow: $box-shadow;
+}
+
+.contextual-help-tabs .active {
+	border-left-color: $primary;
+}
+
+#wpadminbar #wp-admin-bar-my-account.with-avatar>.ab-empty-item img,
+#wpadminbar #wp-admin-bar-my-account.with-avatar>a img {
+	border: none;
+}
+
+#wpadminbar #wp-admin-bar-updates .ab-icon:before {
+	@media (max-width: 782px) {
+		font-size: 22px;
+		line-height: 1;
+		top: -6px;
+	}
+}
+
+#wpadminbar #wp-admin-bar-comments .ab-icon:before,
+#wpadminbar #wp-admin-bar-new-content .ab-icon:before {
+	@media (max-width: 782px) {
+		line-height: 46px !important;
+	}
+}
+
+#wpadminbar #wp-admin-bar-menu-toggle a {
+	@media (max-width: 782px) {
+		background: $primary;
+	}
+}
+
+#wpadminbar #wp-admin-bar-menu-toggle a .ab-icon:before {
+	@media (max-width: 782px) {
+		color: white;
+	}
+}
+
+.wp-responsive-open #wpadminbar #wp-admin-bar-menu-toggle a {
+	@media (max-width: 782px) {
+		background: $blue;
+	}
+}

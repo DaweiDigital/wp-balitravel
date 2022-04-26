@@ -1,0 +1,114 @@
+.social-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social-list-item {
+  padding: 0;
+  margin: 0;
+}
+
+.social-list-link {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: $color-white;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all ease .3s;
+
+  &[href*="facebook"] {
+    color: #3b5998;
+
+    .no-touch &:hover {
+      background-color: $color-white;
+      color: #3b5998;
+      border-color: #3b5998;
+    }
+  }
+
+  &[href*="instagram"] {
+    color: $instagram-color;
+
+    .no-touch &:hover {
+      background-color: $color-white;
+      color: $instagram-color;
+      border-color: $instagram-color;
+    }
+  }
+
+  &[href*="youtube"] {
+    color: $youtube-color;
+
+    .no-touch &:hover {
+      background-color: $color-white;
+      color: $youtube-color;
+      border-color: $youtube-color;
+    }
+  }
+
+  &[href*="wa"] {
+    color: $whatsapp-color;
+
+    .no-touch &:hover {
+      background-color: $color-white;
+      color: $whatsapp-color;
+      border-color: $whatsapp-color;
+    }
+  }
+
+  &.copy-link {
+    color: $color-black;
+    position: relative;
+    border-color: $color-grey-3;
+
+    .no-touch &:hover {
+      color: $color-grey-3;
+      ;
+      border-color: $color-black;
+    }
+  }
+
+  .theme-sl-v2 & {
+    color: $color-grey-8;
+    border-color: $color-black-2;
+    border-radius: 50%;
+  }
+}
+
+.tooltip-clipboard {
+  position: absolute;
+  top: 41px;
+  left: -24px;
+  opacity: 0;
+  transition: opacity ease .3s;
+  @include bg-opacity($color-black, .75);
+  color: $color-white;
+  padding: 6px 17px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent rgba(0, 0, 0, .75) transparent;
+
+  }
+
+  &.succed {
+    opacity: 1;
+  }
+}

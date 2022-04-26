@@ -1,0 +1,30 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<!-- .error -->
+<section class="bs-block page-404 text-center">
+    <div class="container">
+        <a href="{{ fn( 'get_home_url' ) }}" class="brand">
+            <img src="{{ theme.link }}/static/images/ixtent-logo.svg" width="200" alt="Ixtent logo">
+        </a>
+        <header class="page-404-header mt-5 pt-md-4">
+            <h1 class="page-404-title my-0">
+                {{ __( '404', 'ixtent' ) }}
+            </h1>
+        </header>
+        <article class="page-404-content mt-5 pt-md-4">            
+            <p class="m-0">
+                {{ __( 'Zadanou stránku %s', 'profit365' )|format( '<span class="d-block highlight-text">' ~ err_url ~ '</span> jsme u nás bohužel nenašli.' ) }}
+            </p>    
+        </article>
+        <footer class="page-404-footer mt-5 pt-md-4">
+            <a href="{{ fn( 'get_home_url' ) }}" class="btn btn-primary">
+                <span class="d-none d-md-inline-block">{{ __( 'Pokračovat na hlavní stránku', 'ixtent' ) }}</span> 
+                <span class="d-md-none">{{ __( 'Hlavní stránka', 'ixtent' ) }}</span> 
+                <i class="ix-arrow-right ml-2"></i>
+            </a>
+        </footer>
+    </div>
+</section>
+<!-- /.error -->
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<!-- .post -->
+<section class="bs-section py-0 bs-post {{ post.thumbnail is not empty ? 'bs-post--has-thumbnail' : '' }}">
+    <header class="post-header pt-5 bg-white bg-top-lines">
+        <div class="container-medium mx-auto">
+            <h1 class="fs-medium text-center mt-0 mt-md-3">
+                {{ post.title }}
+            </h1>
+
+            <div class="d-flex justify-content-start align-items-center">
+                <ul class="d-flex flex-wrap ml-n1 mb-n1 mt-n1 mr-3">
+                    {% for item in post.categories %}
+                    <li class="m-1">
+                        <span class="tag">
+                            {{ item.title|lower }}
+                        </span>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <span class="posts-meta-data fs-12 extrabold">
+                    {{ post.date( 'd. m. Y' ) }}
+                </span>
+            </div>
+    </header>
+    <article class="post-article bg-lightgrey {{ post.thumbnail is not empty ? 'post-thumb-overlay' : 'pt-4 mt-4' }} ">
+        <div class="container-medium mx-auto">
+            {% if post.thumbnail is not empty %}
+            <figure class="post-thumbnail">
+                <img src="{{ fn( 'get_the_post_thumbnail_url', post.ID, 'post-thumbnail' ) }}" alt="{{ post.title }}"
+                    class="post-image">
+            </figure>
+            {% endif %}
+            <div class="post-content">
+                {{post.content}}
+            </div>
+
+        </div>
+    </article>
+    </div>
+</section>
+{% if related_posts is not empty %}
+<section class="bs-block bg-lightgrey top-box-shadow p-t-md-85 p-t-xs-60 p-b-md-60 p-b-xs-40">
+    <div class="container">
+        <h2 class="text-center">
+            {{ __( 'Čtěte dál', 'ixtent' ) }}
+        </h2>
+
+        <ul class="posts-list pt-4">
+            {% for item in related_posts %}
+            {% include "partials/post.twig" %}
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endif %}
+<!-- /.post -->
+{% endblock %}

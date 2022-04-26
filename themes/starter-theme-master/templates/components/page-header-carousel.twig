@@ -1,0 +1,38 @@
+{% for item in section.page_header_carousel %}
+    <section class="bs-block bs-main-banner{% if item.paddingBottom is not empty %} p-b-md-{{item.paddingBottom}}{% endif %}{% if item.paddingTop is not empty %} p-t-md-{{item.paddingTop}} {% endif %}{{ item.xsDisplay == 'xsNo' ? 'd-xs-none'}}">
+        <div class="container text-center" {% if item.sectionAnchor is not empty %}id="{{item.sectionAnchor}}"{% endif %}>
+            {% if item.pageHeaderTitleQuote is not empty %}
+                <span class="main-banner-quote">{{ item.pageHeaderTitleQuote }}</span>
+            {% endif %}
+            <h1 class="main-banner-title">
+                {{ item.pageHeaderTitle }}
+            </h1>
+            {% if item.pageHeaderText is not empty %}
+            <p class="main-banner-text text-perrex-lg ml-auto mr-auto">
+                {{ item.pageHeaderText}}
+            </p>
+            {% endif %}
+            <div>
+                {% if item.pageHeaderLinkOne is not empty %}
+                    <a class="btn btn-primary" href="{{ item.pageHeaderLinkOne.url}}" target="{{ item.pageHeaderLinkOne.target}}">
+                        {{ item.pageHeaderLinkOne.title}}
+                    </a>
+                {% endif %}
+                {% if item.pageHeaderLinkTwo is not empty %}
+                    <a class="btn btn-ghost ml-md-4" href="{{ item.pageHeaderLinkTwo.url}}" target="{{ item.pageHeaderLinkTwo.target}}">
+                        {{ item.pageHeaderLinkTwo.title}}
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+        {% if item.pageHeaderCarouselImages is not empty %}
+            <ul class="main-banner-list js-main-banner-slick">
+                {% for item in item.pageHeaderCarouselImages %}
+                    <li class="main-banner-list-item js-lazy" data-bg="url({{ item.phiCi.sizes['banner-thumb'] }})">
+                        <noscript><img src="{{ item.phiCi.sizes['banner-thumb'] }}" alt="{{ item.phiCi.alt }}"></noscript>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </section>
+{% endfor %}

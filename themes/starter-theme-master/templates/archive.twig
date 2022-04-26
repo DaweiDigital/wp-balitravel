@@ -1,0 +1,80 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<!-- .intro -->
+<section class="bs-block bs-header bs-p-medium text-center bg-image-lines">
+    <div class="container">
+        <h1 class="fs-medium mt-0 mb-2">
+            {{ post.title }}
+        </h1>
+        <p class="m-0 text-perrex ml-auto mr-auto">
+            {{ __( 'Toto je podnadpis blog', 'ixtent' ) }}
+        </p>
+    </div>
+</section>
+<!-- /.intro -->
+
+<!-- .posts -->
+<section class="bs-block pt-5 bg-lightgrey">
+    <div class="container">
+        {% if categories is not empty %}
+        <div class="posts-filter d-flex align-items-center">
+                <h6 class="post-filter-title text-uppercase mb-0">
+                    {{ __( 'Filtrovat dle kategorie', 'vario' ) }}
+                </h6>
+                <ul class="post-filter-list d-flex flex-wrap ml-4">
+                    <li class="post-filter-item m-1">
+                        <a href="{{ fn( 'home_url', 'blog' ) }}" class="tag {{ category is empty ? 'active' : '' }}">{{ __( 'Zobrazit vše', 'ixtent' ) }}</a>
+                    </li>
+                    {% for item in categories %}
+                    <li class="post-filter-item m-1">
+                        <a href="{{ item.link }}" class="tag {{ item.term_id == category.term_id ? 'active' : '' }}">
+                            {{ item.name }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+        </div>
+        {% endif %}
+
+        <ul class="posts-list mt-4">
+            {% for item in posts %}
+                {% include "partials/post.twig" %}
+            {% endfor %}
+        </ul>
+
+        <ul class="posts-pagination mt-5 {{ posts.pagination.total < 2 ? 'd-none' : '' }}">
+            {% if posts.pagination.prev %}
+            <li class="posts-pagination-item">
+                <a href="{{ posts.pagination.prev.link }}" class="posts-pagination-link arrow-link prev">
+                    <i class="ix-angle-right to-left"></i>
+                </a>
+            </li>
+            {% endif %}
+
+            {% for item in posts.pagination.pages %}
+                {% if item.class == 'dots' %}
+                    <li class="posts-pagination-item">
+                        <span class="pagination__item">...</span>
+                    </li>
+                {% else %}
+                    <li class="posts-pagination-item {{ item.current ? 'active' : '' }}">
+                        <a href="{{ item.link }}" class="posts-pagination-link">
+                            {{ item.title }}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+            {% if posts.pagination.next %}
+            <li class="posts-pagination-item">
+                <a href="posts.pagination.next.link" class="posts-pagination-link arrow-link next">
+                    <i class="ix-angle-right"></i>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</section>
+<!-- /.posts -->
+{% endblock %}

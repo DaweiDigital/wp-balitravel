@@ -1,0 +1,11 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+{% for section in post.get_field( 'sections' ) %}
+        {% if 'acf_fc_layout' != key %}
+            {% include "components/" ~ section.acf_fc_layout|replace({ '_' : '-' }) ~ ".twig" ignore missing %}
+        {% endif %}
+    {% endfor %}
+<!-- /.post -->
+{% endblock %}
